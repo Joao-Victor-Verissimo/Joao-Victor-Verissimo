@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<style>
+ 
+#sonic {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: -200px; 
+    margin-top: 100px;
+}
+    
+#sonic2 {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: -200px; 
+    margin-top: 200px;
+}  
+    
+#sonic3 {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: -200px; 
+    margin-top: 300px;
+}  
+    
+#sonic4 {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: -200px; 
+    margin-top: 400px;
+}
+    
+    
+#sonica {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: 200px; 
+    margin-top: 100px;
+}
+    
+#sonic2a {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: 200px; 
+    margin-top: 200px;
+}  
+    
+#sonic3a {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: 200px; 
+    margin-top: 300px;
+}  
+    
+#sonic4a {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+    margin-left: 200px; 
+    margin-top: 400px;
+}
+    
+#floor {
+  position: absolute;
+    margin-left: -30px; 
+    margin-top: 117px;
+} 
+    
+</style>
+<body>
+
+    <p>
+<button onclick="document.getElementById('music').play();myMove();myMove1();myMove2();myMove3()">Gotta go fast?</button>
+    </p> 
+    
+
+    <img src="image/sonic1.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic">
+    <img src="image/floor.png" alt="HTML5 Icon" style="width:1440px;height:36px;" id="floor">
+    <img src="image/sonic2.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic2">
+    <img src="image/sonic1.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic3">
+    <img src="image/sonic2.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic4">
+    
+    <img src="image/sonic1.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonica">
+    <img src="image/sonic2.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic2a">
+    <img src="image/sonic1.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic3a">
+    <img src="image/sonic2.gif" alt="HTML5 Icon" style="width:36px;height:32px;" id="sonic4a">
+
+    <!--<audio autoplay>
+        <source src="song/GreenHill.mp3" type="audio/mp3">
+        </audio> -->
+    
+<audio id="music" src="song/GreenHill.mp3" preload="auto"></audio>
+    
+
+
+    <script>
+
+        
+        function myMove() {
+          var elem = document.getElementById("sonic"); 
+          var w = window.innerWidth;
+          var pos = w - 1500;
+          var id = setInterval(frame, 5);
+
+            
+          function frame() {
+            if (pos == pos+1) {
+              clearInterval(id);
+            } else {
+              pos++; 
+             /* elem.style.top = pos + 'px'; */
+              elem.style.left = pos + 'px'; 
+            }
+          }
+        }
+        
+        function myMove1() {
+          var w = window.innerWidth;
+          var elem = document.getElementById("sonic2");   
+          var pos = w - 3200;
+          var id = setInterval(frame1, 5);
+            
+          function frame1() {
+            if (pos == pos+1) {
+              clearInterval(id);
+            } else {
+              pos++; 
+             /* elem.style.top = pos + 'px'; */
+              elem.style.right = pos + 'px'; 
+            }
+          }
+        }
+        
+        function myMove2() {
+          var w = window.innerWidth;
+          var elem = document.getElementById("sonic3");   
+          var pos = w - 4700;
+          var id = setInterval(frame2, 5);
+
+            
+          function frame2() {
+            if (pos == pos+1) {
+              clearInterval(id);
+            } else {
+              pos++; 
+             /* elem.style.top = pos + 'px'; */
+              elem.style.left = pos + 'px'; 
+            }
+          }
+        }
+        
+        function myMove3() {
+          var w = window.innerWidth;
+          var elem = document.getElementById("sonic4");   
+          var pos = w - 6500;
+          var id = setInterval(frame3, 5);
+            
+          function frame3() {
+            if (pos == pos+1) {
+              clearInterval(id);
+            } else {
+              pos++; 
+             /* elem.style.top = pos + 'px'; */
+              elem.style.right = pos + 'px'; 
+            }
+          }
+        }
+        
+        
+        
+    </script>
+
+    </body>
+</html>
